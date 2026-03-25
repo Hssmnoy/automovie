@@ -47825,93 +47825,43 @@
     "episodes": [
       {
         "name": "ตอนที่ 1",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/823fe5d99691f924ced34414/823fe5d99691f924ced34414438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 2",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/1064043fda99cc7e18618d13/1064043fda99cc7e18618d13438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 3",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/4a09e1fb3328345f8d7d24a0/4a09e1fb3328345f8d7d24a0438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 4",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/5ad36670230c85ab12d56c40/5ad36670230c85ab12d56c40438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 5",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/aec2cd0ca8984564cd2a4dbe/aec2cd0ca8984564cd2a4dbe438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 6",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/2b497c9efa2feb2f195e34b2/2b497c9efa2feb2f195e34b2438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 7",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/7ab0f41dfba5faf7bdb52bb5/7ab0f41dfba5faf7bdb52bb5438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 8",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/d47a733ab8cf29f54ac9a6f1/d47a733ab8cf29f54ac9a6f1438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 9",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/73ccf383beacb0075bbcbe31/73ccf383beacb0075bbcbe31438.m3u8"
-          }
-        ]
+        "servers": []
       },
       {
         "name": "ตอนที่ 10",
-        "servers": [
-          {
-            "name": "Server 1",
-            "url": "https://main.24playerhd.com/m3u8/52d506951839db1d7fb4bc9d/52d506951839db1d7fb4bc9d438.m3u8"
-          }
-        ]
+        "servers": []
       }
     ]
   }
