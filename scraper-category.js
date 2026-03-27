@@ -163,8 +163,10 @@ if(!exists){
 }else{
 
     // 🔥 ถ้าอยู่หน้าแรก แล้วเจอของซ้ำ = หยุดทันที
-    if(page === 1){
-    console.log("⛔ STOP (duplicate on page 1):", title)
+    if(page <= 2){
+        return // ยังให้ไหลต่อ
+    }
+    console.log("⛔ STOP:", title)
     shouldStop = true
     return false
 }
