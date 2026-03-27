@@ -83,9 +83,12 @@ function saveProgress(name,page){
 
 async function scrapeCategory(name,url){
 
-    let page = loadProgress(name)
+    let startPage = loadProgress(name)
 
-     if(page > 50) page = 1
+if(startPage > 50) startPage = 1
+
+// 🔥 บังคับเริ่มหน้าแรกก่อนเสมอ
+let page = 1
 
     let list = []
 
@@ -123,8 +126,9 @@ async function scrapeCategory(name,url){
 
             }
 
+        let shouldStop = false
             posts.each((i,el)=>{
-
+         
                 if(isTest && list.length >= 1){
                     return false
                 }
@@ -141,24 +145,44 @@ async function scrapeCategory(name,url){
                 const slug = getSlug(link)
 
                 if(!link || !title) return
-                const exists = list.find(x => x.slug === slug)
+        
+        const exists = list.find(x => x.slug === slug)
 
-                if(!exists){
-                    list.push({
-                        title,
-                        slug,
-                        link,
-                        image,
-                        category:name
-                    })
-                }
-            })
-            
+if(!exists){
+
+    console.log("🆕 NEW SERIES:", title)
+
+    list.push({
+        title,
+        slug,
+        link,
+        image,
+        category:name
+    })
+
+}else{
+
+    // 🔥 ถ้าอยู่หน้าแรก แล้วเจอของซ้ำ = หยุดทันที
+    if(page === 1){
+    console.log("⛔ STOP (duplicate on page 1):", title)
+    shouldStop = true
+    return false
+}
+}
+})
+    if(shouldStop){
+    break
+ }       
     if(isTest && list.length >= 1){
         console.log("TEST MODE STOP:",name)
             break
     }
-            
+          // 🔥 หลังจบหน้า 1 → กลับไปวิ่งต่อจาก progress
+if(page === 1 && startPage > 1){
+    page = startPage
+    console.log("↩️ CONTINUE FROM PAGE:", startPage)
+    continue
+}  
     page++
 saveProgress(name,page)
 
