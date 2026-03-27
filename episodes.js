@@ -113,81 +113,149 @@ if(startIndex >= series.length){
 
 console.log("START INDEX:",startIndex,"/",series.length)
     
-    for(let i=startIndex;i<series.length;i++){
-    
-        const s = series[i]
+    const PRIORITY = 20
 
-        console.log("SERIES:",s.title)
+// 🔥 วน 20 เรื่องแรกก่อน
+for(let i=0;i<Math.min(PRIORITY, series.length);i++){
 
-        await sleep(800)
+    const s = series[i]
 
-        try{
+    console.log("SERIES:",s.title)
 
-            const res = await axios.get(s.link,{
-                headers:{ "user-agent":"Mozilla/5.0" },
-                timeout:15000
-            })
+    await sleep(800)
 
-            const $ = cheerio.load(res.data)
+    try{
 
-            let episodes = []
+        const res = await axios.get(s.link,{
+            headers:{ "user-agent":"Mozilla/5.0" },
+            timeout:15000
+        })
 
-            $("select[name=Sequel_select] option").each((i,el)=>{
+        const $ = cheerio.load(res.data)
 
-                const epName = $(el).text().trim()
-                const epLink = $(el).attr("value")
+        let episodes = []
 
-                if(epLink){
+        $("select[name=Sequel_select] option").each((i,el)=>{
 
-                    episodes.push({
-                        name: epName,
-                        ep: getEpNumber(epName),
-                        url: "https://www.series-days.com"+epLink
-                    })
+            const epName = $(el).text().trim()
+            const epLink = $(el).attr("value")
 
-                }
-
-            })
-
-            episodes.sort((a,b)=>a.ep-b.ep)
-
-            if(episodes.length === 0){
-                console.log("NO EPISODES:",s.title)
+            if(epLink){
+                episodes.push({
+                    name: epName,
+                    ep: getEpNumber(epName),
+                    url: "https://www.series-days.com"+epLink
+                })
             }
 
-const exists = result.find(x => x.slug === s.slug)
+        })
 
-if(!exists){
+        episodes.sort((a,b)=>a.ep-b.ep)
 
-    result.push({
-        title: s.title,
-        slug: s.slug,
-        image: s.image,
-        episodes
-    })
+        const exists = result.find(x => x.slug === s.slug)
 
-}else{
+        if(!exists){
 
-    exists.episodes = episodes
+            result.push({
+                title: s.title,
+                slug: s.slug,
+                image: s.image,
+                episodes
+            })
 
-}
+        }else{
 
-            // ✅ autosave
-            atomicSave(file,result)
+            const oldEpisodes = exists.episodes || []
 
-            // ✅ save progress
-    saveProgress(category,i+1)
-    if((i+1) % 5 === 0){
-        gitCommit(`episodes ${category} ${i+1}`)
-}
-}catch(e){
+            const newEpisodes = episodes.filter(
+                ep => !oldEpisodes.find(o => o.ep === ep.ep)
+            )
 
-    console.log("ERROR:",s.title)
-    console.log(e.message)
+            if(newEpisodes.length > 0){
+                console.log("🆕 NEW EP:", s.title)
+            }
 
-}
+            if(episodes.length > 0){
+                exists.episodes = episodes
+            }
 
+        }
+
+        atomicSave(file,result)
+        saveProgress(category,i+1)
+
+    }catch(e){
+        console.log("ERROR:",s.title)
     }
+
+}
+
+// 🔁 วิ่งต่อจากที่ค้างไว้
+for(let i=startIndex;i<series.length;i++){
+
+    if(i < PRIORITY) continue
+
+    const s = series[i]
+
+    console.log("SERIES:",s.title)
+
+    await sleep(800)
+
+    try{
+
+        const res = await axios.get(s.link,{
+            headers:{ "user-agent":"Mozilla/5.0" },
+            timeout:15000
+        })
+
+        const $ = cheerio.load(res.data)
+
+        let episodes = []
+
+        $("select[name=Sequel_select] option").each((i,el)=>{
+
+            const epName = $(el).text().trim()
+            const epLink = $(el).attr("value")
+
+            if(epLink){
+                episodes.push({
+                    name: epName,
+                    ep: getEpNumber(epName),
+                    url: "https://www.series-days.com"+epLink
+                })
+            }
+
+        })
+
+        episodes.sort((a,b)=>a.ep-b.ep)
+
+        const exists = result.find(x => x.slug === s.slug)
+
+        if(!exists){
+
+            result.push({
+                title: s.title,
+                slug: s.slug,
+                image: s.image,
+                episodes
+            })
+
+        }else{
+
+            if(episodes.length > 0){
+                exists.episodes = episodes
+            }
+
+        }
+
+        atomicSave(file,result)
+        saveProgress(category,i+1)
+
+    }catch(e){
+        console.log("ERROR:",s.title)
+    }
+
+}
 
     console.log("SAVE episodes-"+category+".json","TOTAL:",result.length)
 
