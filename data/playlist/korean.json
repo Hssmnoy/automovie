@@ -38,6 +38,22 @@
             "url": "https://main.24playerhd.com/m3u8/16a1d0dc9532f3fe051acf81/16a1d0dc9532f3fe051acf81438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 8",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 7",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 6",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 5",
+        "servers": []
       }
     ]
   },
@@ -212,6 +228,22 @@
             "url": "https://main.24playerhd.com/m3u8/7e084ec0ae4aab0651d1797c/7e084ec0ae4aab0651d1797c438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 6",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 5",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 4",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 3",
+        "servers": []
       }
     ]
   },
@@ -272,6 +304,14 @@
             "url": "https://main.24playerhd.com/m3u8/9dab3560665571942cfbeade/9dab3560665571942cfbeade438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 8",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 7",
+        "servers": []
       }
     ]
   },
@@ -323,6 +363,22 @@
             "url": "https://main.24playerhd.com/m3u8/71feafddd299f2f8027b9cd4/71feafddd299f2f8027b9cd4438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 9",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 8",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 7",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 6",
+        "servers": []
       }
     ]
   },
@@ -515,6 +571,14 @@
             "url": "https://main.24playerhd.com/m3u8/8b4b1bb3d9dc66f6000705a9/8b4b1bb3d9dc66f6000705a9438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 12",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 11",
+        "servers": []
       }
     ]
   },
@@ -707,6 +771,14 @@
             "url": "https://main.24playerhd.com/m3u8/863f536ec172ca102ea127ea/863f536ec172ca102ea127ea438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 12",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 11",
+        "servers": []
       }
     ]
   },
@@ -731,6 +803,30 @@
             "url": "https://main.24playerhd.com/m3u8/a2e2d1e9cfbb14f0aa563bcb/a2e2d1e9cfbb14f0aa563bcb438.m3u8"
           }
         ]
+      },
+      {
+        "name": "ตอนที่ 8",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 7",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 6",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 5",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 4",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 3",
+        "servers": []
       }
     ]
   },
@@ -76423,6 +76519,50 @@
             "url": "https://main.24playerhd.com/m3u8/bc0345855292364a9fe986ce/bc0345855292364a9fe986ce438.m3u8"
           }
         ]
+      }
+    ]
+  },
+  {
+    "title": "Never Forget Your Enemy (2026) ยังไงก็ใช่นาย",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Never-Forget-Your-Enemy-2026-ยังไงก็ใช่นาย-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 4",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 3",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 2",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 1",
+        "servers": []
+      }
+    ]
+  },
+  {
+    "title": "Climax (2026) สุดจุดเดือด",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Climax-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 4",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 3",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 2",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 1",
+        "servers": []
       }
     ]
   }
