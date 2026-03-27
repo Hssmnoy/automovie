@@ -170,7 +170,7 @@ if(!exists){
     shouldStop = true
     return false
 }
-}
+                
 })
     if(shouldStop){
     break
@@ -261,15 +261,5 @@ async function run(){
 }
 
 run()
-
-
-
-
-
-
-
-
-
-
 
 
