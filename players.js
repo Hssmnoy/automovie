@@ -240,10 +240,54 @@ console.log("CATEGORY:", category);
 const seriesList = isTest ? (data[0] ? [data[0]] : []) : data;
 
 let startIndex = loadProgress(category);
+const PRIORITY = 20
 
+// 🔥 เช็ค 20 เรื่องแรกก่อน
+for(let i=0;i<(isTest ? 1 : Math.min(PRIORITY, seriesList.length));i++){
+    await delay(800)
+    const series = seriesList[i];
+    console.log("PRIORITY SERIES:", series.title);
+    console.log("Episodes:", (series.episodes || []).length);
+    
+    let episodes = series.episodes || [];
+
+    const existsSeries = result.find(x => x.title === series.title);
+    const results = existsSeries ? existsSeries.episodes || [] : [];
+
+    for(let j=0;j<episodes.length;j++){
+
+        const ep = episodes[j];
+
+        const existsEp = results.find(x => x.name === ep.name);
+
+        if(existsEp) continue;
+
+        const r = await scrapeEpisode(ep,j);
+
+        if(r) results.push(r);
+    }
+
+    const obj = {
+        title:series.title,
+        image:series.image || "",
+        episodes:results
+    };
+
+    const exists = result.find(x => x.title === obj.title);
+
+    if(!exists){
+        result.push(obj);
+    }else{
+        exists.episodes = obj.episodes;
+    }
+
+    atomicSave(outputFile,result);
+}
 console.log("START INDEX:",startIndex,"/",seriesList.length);
 
-        for(let i=startIndex;i<seriesList.length;i++){
+      for(let i=startIndex;i<seriesList.length;i++){
+
+    if(i < PRIORITY) continue;
 
             const series = seriesList[i];
             let episodes = series.episodes || [];
@@ -261,15 +305,23 @@ console.log("START INDEX:",startIndex,"/",seriesList.length);
                 episodes = episodes[0] ? [episodes[0]] : [];
             }
 
-            const results = [];
+            const existsSeries = result.find(x => x.title === series.title);
+
+const results = existsSeries ? existsSeries.episodes || [] : [];
 
             for(let j=0;j<episodes.length;j++){
 
                 const ep = episodes[j];
 
-                const r = await scrapeEpisode(ep,j);
+                const existsEp = results.find(x => x.name === ep.name);
 
-                if(r) results.push(r);
+if(existsEp){
+    continue; // 🔥 ข้าม ถ้ามีแล้ว
+}
+
+const r = await scrapeEpisode(ep,j);
+
+if(r) results.push(r);
 
             }
 
