@@ -150,7 +150,7 @@ for(let i=0;i<Math.min(PRIORITY, series.length);i++){
 
         })
 
-        episodes.sort((a,b)=>a.ep-b.ep)
+        episodes.sort((a,b)=>b.ep-a.ep)
 
         const exists = result.find(x => x.slug === s.slug)
 
@@ -227,7 +227,7 @@ for(let i=startIndex;i<series.length;i++){
 
         })
 
-        episodes.sort((a,b)=>a.ep-b.ep)
+        episodes.sort((a,b)=>b.ep-a.ep)
 
         const exists = result.find(x => x.slug === s.slug)
 
@@ -284,10 +284,3 @@ async function run(){
 }
 
 run()
-
-
-
-
-
-
-
