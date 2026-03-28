@@ -1131,6 +1131,11 @@
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Glory-Back-2026-เพลิงฟื้นคืนใจ-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 29",
+        "ep": 29,
+        "url": "https://www.series-days.com/glory-back-ep-29/"
+      },
+      {
         "name": "ตอนที่ 28",
         "ep": 28,
         "url": "https://www.series-days.com/glory-back-ep-28/"
@@ -89353,6 +89358,70 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/mama-go-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "The Secret of the Lost Pearl S2 (2026)",
+    "slug": "https:www.serie-days.comthe-secret-of-the-lost-pearl-s2",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/The-Secret-of-the-Lost-Pearl-S2-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/the-secret-of-the-lost-pearl-s2-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Love Beyond the Grave (2026) ประทีปรักเหนือสองภพ",
+    "slug": "https:www.serie-days.comlove-beyond-the-grave",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Love-Beyond-the-Grave-2026-ประทีปรักเหนือสองภพ-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-1/"
       }
     ]
   }

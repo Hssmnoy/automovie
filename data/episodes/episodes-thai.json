@@ -52,6 +52,11 @@
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Girl-from-Nowhere-the-Reset-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/girl-from-nowhere-the-reset-ep-4/"
+      },
+      {
         "name": "ตอนที่ 3",
         "ep": 3,
         "url": "https://www.series-days.com/girl-from-nowhere-the-reset-ep-3/"
@@ -123155,6 +123160,97 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/singles-inferno-5-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Love Upon A Time (2026) ภพเธอ",
+    "slug": "https:www.serie-days.comlove-upon-a-time",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Love-Upon-A-Time-2026-ภพเธอ-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/love-upon-a-time-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Love Beyond the Grave (2026) ประทีปรักเหนือสองภพ",
+    "slug": "https:www.serie-days.comlove-beyond-the-grave",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Love-Beyond-the-Grave-2026-ประทีปรักเหนือสองภพ-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/love-beyond-the-grave-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Detective Hole (2026) ยอดนักสืบแฮร์รี โฮล",
+    "slug": "https:www.serie-days.comdetective-hole",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Detective-Hole-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/detective-hole-ep-9/"
+      },
+      {
+        "name": "ตอนที่ 8",
+        "ep": 8,
+        "url": "https://www.series-days.com/detective-hole-ep-8/"
+      },
+      {
+        "name": "ตอนที่ 7",
+        "ep": 7,
+        "url": "https://www.series-days.com/detective-hole-ep-7/"
+      },
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/detective-hole-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/detective-hole-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/detective-hole-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/detective-hole-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/detective-hole-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/detective-hole-ep-1/"
       }
     ]
   }
