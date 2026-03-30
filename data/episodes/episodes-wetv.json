@@ -1131,6 +1131,11 @@
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Glory-Back-2026-เพลิงฟื้นคืนใจ-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 31",
+        "ep": 31,
+        "url": "https://www.series-days.com/glory-back-ep-31/"
+      },
+      {
         "name": "ตอนที่ 30",
         "ep": 30,
         "url": "https://www.series-days.com/glory-back-ep-30/"
@@ -1862,6 +1867,11 @@
     "slug": "yesterday",
     "image": "https://www.series-days.com/wp-content/uploads/2026/02/Yesterday-2026-รอยรัก-วันวาน-Uncut-Ver-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/yesterday-ep-9/"
+      },
       {
         "name": "ตอนที่ 8",
         "ep": 8,
@@ -89577,6 +89587,43 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/love-beyond-the-grave-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Born To Be The Villain (2026)",
+    "slug": "https:www.serie-days.comborn-to-be-the-villain",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/03/Born-To-Be-The-Villain-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/born-to-be-the-villain-ep-1/"
       }
     ]
   }
