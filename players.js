@@ -276,18 +276,37 @@ async function run(){
                 episodes:results
             };
 
-            const exists = result.find(x => x.title === obj.title);
+            const index = result.findIndex(x => x.title === obj.title)
 
-            if(!exists){
-                result.push(obj);
-            }else{
-                exists.episodes = obj.episodes;
-            }
+if(index === -1){
+
+    // 🆕 เรื่องใหม่ → ขึ้นบน
+    result.unshift(obj)
+
+}else{
+
+    const exists = result[index]
+
+    const oldCount = (exists.episodes || []).length
+    const newCount = (obj.episodes || []).length
+
+    // อัปเดตข้อมูลก่อน
+    exists.episodes = obj.episodes
+
+    // 🔥 ถ้ามีตอนเพิ่ม → ดันขึ้นบน
+    if(newCount > oldCount){
+
+        result.splice(index,1)
+        result.unshift(exists)
+
+        console.log("⬆️ MOVE UP:", obj.title)
+    }
+}
 
             atomicSave(outputFile,result);
 
-            // 🔥 commit ทุก 10 เรื่อง
-            if(i % 10 === 0){
+            // 🔥 commit ทุก 50 เรื่อง
+            if(i % 50 === 0){
                 gitCommit(`playlist ${category} ${i}`);
             }
 
