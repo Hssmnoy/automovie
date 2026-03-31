@@ -53,52 +53,20 @@ function gitCommit(message){
     }
 
 }
-function loadProgress(name){
-
-    const file = `data/progress/${name}.json`
-
-    if(!fs.existsSync(file)){
-        return 1
-    }
-
-    const data = JSON.parse(fs.readFileSync(file,"utf8"))
-
-    return data.page || 1
-}
-
-function saveProgress(name,page){
-
-    fs.mkdirSync("data/progress",{recursive:true})
-
-    fs.writeFileSync(
-    `data/progress/${name}.json`,
-    JSON.stringify({
-        category:name,
-        page:page,
-        updated: Date.now()
-    },null,2)
-)
-
-}
 
 async function scrapeCategory(name,url){
 
-    let startPage = loadProgress(name)
-
-if(startPage > 50) startPage = 1
-
-// 🔥 บังคับเริ่มหน้าแรกก่อนเสมอ
-let page = 1
+    let page = 1
+    let foundNewInFirst2Pages = false
 
     let list = []
 
-    // ✅ สร้างโฟลเดอร์ก่อน
     fs.mkdirSync("data/series",{recursive:true})
 
     const file = `data/series/series-${name}.json`
 
     if(fs.existsSync(file)){
-    list = JSON.parse(fs.readFileSync(file,"utf8"))
+        list = JSON.parse(fs.readFileSync(file,"utf8"))
     }
 
     while(true){
@@ -110,9 +78,7 @@ let page = 1
         try{
 
             const res = await axios.get(pageUrl,{
-                headers:{
-                    "User-Agent":"Mozilla/5.0"
-                }
+                headers:{ "User-Agent":"Mozilla/5.0" }
             })
 
             const $ = cheerio.load(res.data)
@@ -120,21 +86,20 @@ let page = 1
             const posts = $(".grid-movie .box")
 
             if(posts.length === 0){
-
                 console.log("END CATEGORY:",name)
                 break
-
             }
 
-        let shouldStop = false
+            let newCount = 0
+
+            // ✅ วนดูทีละเรื่องในหน้า
             posts.each((i,el)=>{
-         
+
                 if(isTest && list.length >= 1){
                     return false
                 }
 
                 const link = $(el).find("a").attr("href")
-
                 const title = $(el).find(".p2").text().trim()
 
                 const image =
@@ -145,64 +110,60 @@ let page = 1
                 const slug = getSlug(link)
 
                 if(!link || !title) return
-        
-        const exists = list.find(x => x.slug === slug)
 
-if(!exists){
+                const exists = list.find(x => x.slug === slug)
 
-    console.log("🆕 NEW SERIES:", title)
+                if(!exists){
 
-    list.push({
-        title,
-        slug,
-        link,
-        image,
-        category:name
-    })
+                    newCount++
 
-}else{
+                    if(page <= 2){
+                        foundNewInFirst2Pages = true
+                    }
 
-    // 🔥 ถ้าอยู่หน้าแรก แล้วเจอของซ้ำ = หยุดทันที
-    if(page <= 2){
-        return // ยังให้ไหลต่อ
-    }
-    console.log("⛔ STOP:", title)
-    shouldStop = true
-    return false
-}
-                
-})
-    if(shouldStop){
-    break
- }       
-    if(isTest && list.length >= 1){
-        console.log("TEST MODE STOP:",name)
-            break
-    }
-          // 🔥 หลังจบหน้า 1 → กลับไปวิ่งต่อจาก progress
-if(page === 1 && startPage > 1){
-    page = startPage
-    console.log("↩️ CONTINUE FROM PAGE:", startPage)
-    continue
-}  
-    page++
-saveProgress(name,page)
+                    console.log("🆕 NEW SERIES:", title)
 
-fs.writeFileSync(
-`data/series/series-${name}.json`,
-JSON.stringify(list,null,2)
-)
+                    list.push({
+                        title,
+                        slug,
+                        link,
+                        image,
+                        category:name
+                    })
+                }
 
-if(page % 5 === 0){
-    gitCommit(`update ${name} page ${page}`)
-}
-            // ป้องกันโดน block
+            })
+
+            // ❌ ถ้า 2 หน้าแรกไม่มีของใหม่เลย → หยุดทั้งหมวด
+            if(page === 2 && !foundNewInFirst2Pages){
+                console.log("⛔ NO NEW IN FIRST 2 PAGES → STOP")
+                break
+            }
+
+            // ❌ ถ้าหน้าปัจจุบันไม่มีของใหม่ → หยุด
+            if(page > 2 && newCount === 0){
+                console.log("⛔ NO NEW → STOP PAGE", page)
+                break
+            }
+
+            // ✅ บันทึกทุกหน้า
+            fs.writeFileSync(
+                file,
+                JSON.stringify(list,null,2)
+            )
+
+            // ✅ commit ทุก 5 หน้า
+            if(page % 5 === 0){
+                gitCommit(`update ${name} page ${page}`)
+            }
+
+            page++ // 🔥 ไปหน้าถัดไป (ต้องอยู่นอก each)
+
             await sleep(1000)
 
         }catch(e){
 
             console.log("ERROR PAGE",page)
-
             break
 
         }
@@ -210,14 +171,13 @@ if(page % 5 === 0){
     }
 
     fs.writeFileSync(
-    `data/series/series-${name}.json`,
-    JSON.stringify(list,null,2)
+        file,
+        JSON.stringify(list,null,2)
     )
 
     console.log("SAVE data/series/series-"+name+".json")
     console.log("TOTAL:",list.length)
-
-    }
+}
 
 async function run(){
 
