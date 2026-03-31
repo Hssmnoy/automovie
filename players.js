@@ -204,23 +204,21 @@ async function scrapeEpisode(ep,i){
 async function run(){
 
     fs.mkdirSync(OUTPUT_DIR,{recursive:true});
-    fs.mkdirSync("data/progress",{recursive:true});
 
-const selectedCategory = process.argv[2];
+    const selectedCategory = process.argv[2];
 
-let files = fs.readdirSync(EPISODES_DIR)
-    .filter(f => f.endsWith(".json"))
-    .sort();
-console.log("FILES:", files);
+    let files = fs.readdirSync(EPISODES_DIR)
+        .filter(f => f.endsWith(".json"))
+        .sort();
 
-if(selectedCategory){
-    files = files.filter(f => f.includes(selectedCategory));
-}
+    if(selectedCategory){
+        files = files.filter(f => f.includes(selectedCategory));
+    }
 
     const isTest = process.argv.includes("test");
-    
+
     for(const file of files){
-        
+
         const data = JSON.parse(
             fs.readFileSync(`${EPISODES_DIR}/${file}`,"utf8")
         );
@@ -228,7 +226,9 @@ if(selectedCategory){
         const category = file
             .replace("episodes-","")
             .replace(".json","");
-console.log("CATEGORY:", category);
+
+        console.log("CATEGORY:", category);
+
         let result = [];
 
         const outputFile = `${OUTPUT_DIR}/${category}.json`;
@@ -237,77 +237,24 @@ console.log("CATEGORY:", category);
             result = JSON.parse(fs.readFileSync(outputFile,"utf8"));
         }
 
-const seriesList = isTest ? (data[0] ? [data[0]] : []) : data;
+        const seriesList = isTest ? (data[0] ? [data[0]] : []) : data;
 
-let startIndex = loadProgress(category);
-const PRIORITY = 20
-
-// 🔥 เช็ค 20 เรื่องแรกก่อน
-for(let i=0;i<(isTest ? 1 : Math.min(PRIORITY, seriesList.length));i++){
-    await delay(800)
-    const series = seriesList[i];
-    console.log("PRIORITY SERIES:", series.title);
-    console.log("Episodes:", (series.episodes || []).length);
-    
-    let episodes = series.episodes || [];
-
-    const existsSeries = result.find(x => x.title === series.title);
-    const results = existsSeries ? existsSeries.episodes || [] : [];
-
-    for(let j=0;j<episodes.length;j++){
-
-        const ep = episodes[j];
-
-        const existsEp = results.find(x => x.name === ep.name);
-
-        if(existsEp) continue;
-
-        const r = await scrapeEpisode(ep,j);
-
-        if(r) results.push(r);
-    }
-
-    const obj = {
-        title:series.title,
-        image:series.image || "",
-        episodes:results
-    };
-
-    const exists = result.find(x => x.title === obj.title);
-
-    if(!exists){
-        result.push(obj);
-    }else{
-        exists.episodes = obj.episodes;
-    }
-
-    atomicSave(outputFile,result);
-}
-console.log("START INDEX:",startIndex,"/",seriesList.length);
-
-      for(let i=startIndex;i<seriesList.length;i++){
-
-    if(i < PRIORITY) continue;
+        for(let i=0;i<seriesList.length;i++){
 
             const series = seriesList[i];
+
+            console.log("SERIES:",series.title);
+            console.log("Episodes:",(series.episodes || []).length);
+
             let episodes = series.episodes || [];
 
-            console.log("Series:",series.title);
-            console.log("Episodes:",episodes.length);
-
-            const obj = {
-                title:series.title,
-                image:series.image || "",
-                episodes:[]
-            };
-     
             if(isTest){
                 episodes = episodes[0] ? [episodes[0]] : [];
             }
 
             const existsSeries = result.find(x => x.title === series.title);
 
-const results = existsSeries ? existsSeries.episodes || [] : [];
+            const results = existsSeries ? existsSeries.episodes || [] : [];
 
             for(let j=0;j<episodes.length;j++){
 
@@ -315,17 +262,19 @@ const results = existsSeries ? existsSeries.episodes || [] : [];
 
                 const existsEp = results.find(x => x.name === ep.name);
 
-if(existsEp){
-    continue; // 🔥 ข้าม ถ้ามีแล้ว
-}
+                if(existsEp) continue;
 
-const r = await scrapeEpisode(ep,j);
+                const r = await scrapeEpisode(ep,j);
 
-if(r) results.push(r);
+                if(r) results.push(r);
 
             }
 
-            obj.episodes = results;
+            const obj = {
+                title:series.title,
+                image:series.image || "",
+                episodes:results
+            };
 
             const exists = result.find(x => x.title === obj.title);
 
@@ -335,20 +284,19 @@ if(r) results.push(r);
                 exists.episodes = obj.episodes;
             }
 
-            // autosave ทุก series
             atomicSave(outputFile,result);
 
-            // save progress
-            saveProgress(category,i+1);
-            
-            if((i+1) % 5 === 0){
-            gitCommit(`playlist ${category} ${i+1}`);
+            // 🔥 commit ทุก 10 เรื่อง
+            if(i % 10 === 0){
+                gitCommit(`playlist ${category} ${i}`);
             }
+
         }
 
         atomicSave(outputFile,result);
 
-        console.log("done ->",outputFile);
+        console.log("DONE ->",outputFile);
+
     }
 
 }
