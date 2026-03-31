@@ -83,20 +83,22 @@ async function scrapeEpisodes(category){
 
     fs.mkdirSync("data/episodes",{recursive:true})
 
-const seriesFile = `data/series/series-${category}.json`
+    const seriesFile = `data/series/series-${category}.json`
 
-if(!fs.existsSync(seriesFile)){
-    console.log("SKIP: series file not found ->",seriesFile)
-    return
-}
+    if(!fs.existsSync(seriesFile)){
+        console.log("SKIP:",category)
+        return
+    }
 
-const series = JSON.parse(
-    fs.readFileSync(seriesFile,"utf8")
-)
-if(!Array.isArray(series) || series.length === 0){
-    console.log("NO SERIES DATA:",category)
-    return
-}
+    const series = JSON.parse(
+        fs.readFileSync(seriesFile,"utf8")
+    )
+
+    if(!Array.isArray(series) || series.length === 0){
+        console.log("NO SERIES:",category)
+        return
+    }
+
     let result = []
 
     const file = `data/episodes/episodes-${category}.json`
@@ -105,157 +107,87 @@ if(!Array.isArray(series) || series.length === 0){
         result = JSON.parse(fs.readFileSync(file,"utf8"))
     }
 
-    let startIndex = loadProgress(category)
+    console.log("TOTAL SERIES:",series.length)
 
-if(startIndex >= series.length){
-    startIndex = 0
-}
-
-console.log("START INDEX:",startIndex,"/",series.length)
-    
     const PRIORITY = 20
 
-// 🔥 วน 20 เรื่องแรกก่อน
-for(let i=0;i<Math.min(PRIORITY, series.length);i++){
+    for(let i=0;i<series.length;i++){
 
-    const s = series[i]
+        const s = series[i]
 
-    console.log("SERIES:",s.title)
+        console.log("SERIES:",s.title)
 
-    await sleep(800)
+        await sleep(800)
 
-    try{
+        try{
 
-        const res = await axios.get(s.link,{
-            headers:{ "user-agent":"Mozilla/5.0" },
-            timeout:15000
-        })
-
-        const $ = cheerio.load(res.data)
-
-        let episodes = []
-
-        $("select[name=Sequel_select] option").each((i,el)=>{
-
-            const epName = $(el).text().trim()
-            const epLink = $(el).attr("value")
-
-            if(epLink){
-                episodes.push({
-                    name: epName,
-                    ep: getEpNumber(epName),
-                    url: "https://www.series-days.com"+epLink
-                })
-            }
-
-        })
-
-        episodes.sort((a,b)=>b.ep-a.ep)
-
-        const exists = result.find(x => x.slug === s.slug)
-
-        if(!exists){
-
-            result.push({
-                title: s.title,
-                slug: s.slug,
-                image: s.image,
-                episodes
+            const res = await axios.get(s.link,{
+                headers:{ "user-agent":"Mozilla/5.0" },
+                timeout:15000
             })
 
-        }else{
+            const $ = cheerio.load(res.data)
 
-            const oldEpisodes = exists.episodes || []
+            let episodes = []
 
-            const newEpisodes = episodes.filter(
-                ep => !oldEpisodes.find(o => o.ep === ep.ep)
-            )
+            $("select[name=Sequel_select] option").each((i,el)=>{
 
-            if(newEpisodes.length > 0){
-                console.log("🆕 NEW EP:", s.title)
-            }
+                const epName = $(el).text().trim()
+                const epLink = $(el).attr("value")
 
-            if(episodes.length > 0){
-                exists.episodes = episodes
-            }
+                if(epLink){
+                    episodes.push({
+                        name: epName,
+                        ep: getEpNumber(epName),
+                        url: "https://www.series-days.com"+epLink
+                    })
+                }
 
-        }
-
-        atomicSave(file,result)
-        saveProgress(category,i+1)
-
-    }catch(e){
-        console.log("ERROR:",s.title)
-    }
-
-}
-
-// 🔁 วิ่งต่อจากที่ค้างไว้
-for(let i=startIndex;i<series.length;i++){
-
-    if(i < PRIORITY) continue
-
-    const s = series[i]
-
-    console.log("SERIES:",s.title)
-
-    await sleep(800)
-
-    try{
-
-        const res = await axios.get(s.link,{
-            headers:{ "user-agent":"Mozilla/5.0" },
-            timeout:15000
-        })
-
-        const $ = cheerio.load(res.data)
-
-        let episodes = []
-
-        $("select[name=Sequel_select] option").each((i,el)=>{
-
-            const epName = $(el).text().trim()
-            const epLink = $(el).attr("value")
-
-            if(epLink){
-                episodes.push({
-                    name: epName,
-                    ep: getEpNumber(epName),
-                    url: "https://www.series-days.com"+epLink
-                })
-            }
-
-        })
-
-        episodes.sort((a,b)=>b.ep-a.ep)
-
-        const exists = result.find(x => x.slug === s.slug)
-
-        if(!exists){
-
-            result.push({
-                title: s.title,
-                slug: s.slug,
-                image: s.image,
-                episodes
             })
 
-        }else{
+            episodes.sort((a,b)=>b.ep-a.ep)
 
-            if(episodes.length > 0){
-                exists.episodes = episodes
+            const exists = result.find(x => x.slug === s.slug)
+
+            if(!exists){
+
+                result.push({
+                    title: s.title,
+                    slug: s.slug,
+                    image: s.image,
+                    episodes
+                })
+
+            }else{
+
+                const oldEpisodes = exists.episodes || []
+
+                const newEpisodes = episodes.filter(
+                    ep => !oldEpisodes.find(o => o.ep === ep.ep)
+                )
+
+                if(newEpisodes.length > 0){
+                    console.log("🆕 NEW EP:", s.title)
+                }
+
+                if(episodes.length > 0){
+                    exists.episodes = episodes
+                }
+
             }
 
+            atomicSave(file,result)
+
+        }catch(e){
+            console.log("ERROR:",s.title)
         }
 
-        atomicSave(file,result)
-        saveProgress(category,i+1)
+        // 🔥 commit ทุก 20 เรื่อง
+        if(i % PRIORITY === 0){
+            gitCommit(`episodes ${category} ${i}`)
+        }
 
-    }catch(e){
-        console.log("ERROR:",s.title)
     }
-
-}
 
     console.log("SAVE episodes-"+category+".json","TOTAL:",result.length)
 
