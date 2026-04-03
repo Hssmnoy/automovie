@@ -149,6 +149,11 @@
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Still-Shinning-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/still-shinning-ep-9/"
+      },
+      {
         "name": "ตอนที่ 8",
         "ep": 8,
         "url": "https://www.series-days.com/still-shinning-ep-8/"
@@ -242,6 +247,11 @@
     "slug": "in-your-radiant-season",
     "image": "https://www.series-days.com/wp-content/uploads/2026/02/In-Your-Radiant-Season-2026-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 12",
+        "ep": 12,
+        "url": "https://www.series-days.com/in-your-radiant-season-ep-12/"
+      },
       {
         "name": "ตอนที่ 11",
         "ep": 11,
