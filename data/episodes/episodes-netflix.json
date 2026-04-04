@@ -92,6 +92,11 @@
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Girl-from-Nowhere-the-Reset-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/girl-from-nowhere-the-reset-ep-5/"
+      },
+      {
         "name": "ตอนที่ 4",
         "ep": 4,
         "url": "https://www.series-days.com/girl-from-nowhere-the-reset-ep-4/"
@@ -118,6 +123,11 @@
     "slug": "still-shinning",
     "image": "https://www.series-days.com/wp-content/uploads/2026/03/Still-Shinning-2026-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 10",
+        "ep": 10,
+        "url": "https://www.series-days.com/still-shinning-ep-10/"
+      },
       {
         "name": "ตอนที่ 9",
         "ep": 9,
