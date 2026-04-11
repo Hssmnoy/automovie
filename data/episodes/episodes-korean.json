@@ -92198,5 +92198,34 @@
         "url": "https://www.series-days.com/bloodhounds-2-ep-1/"
       }
     ]
+  },
+  {
+    "title": "Perfect Crown (2026) รักนี้มงลง",
+    "slug": "https:www.serie-days.comperfect-crown",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Perfect-Crown-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/perfect-crown-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Scandal Love (2026)",
+    "slug": "https:www.serie-days.comscandal-love",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Scandal-Love-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/scandal-love-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/scandal-love-ep-1/"
+      }
+    ]
   }
 ]
