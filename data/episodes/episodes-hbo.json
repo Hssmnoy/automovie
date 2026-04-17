@@ -5871,5 +5871,34 @@
         "url": "https://www.series-days.com/game-of-thrones-season-1-ep-1/"
       }
     ]
+  },
+  {
+    "title": "EUPHORIA Season 3 (2026)",
+    "slug": "https:www.serie-days.comeuphoria-season-3",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/04/EUPHORIA-Season-3-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/euphoria-season-3-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Yumi’s Cells 3 (2026) ยูมีกับเซลล์สมองสุดอลเวง 3",
+    "slug": "https:www.serie-days.comyumis-cells-3",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Yumis-Cells-3-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/yumis-cells-3-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/yumis-cells-3-ep-1/"
+      }
+    ]
   }
 ]
