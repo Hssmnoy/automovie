@@ -88686,6 +88686,11 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Scandal-Love-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/scandal-love-ep-9/"
+      },
+      {
         "name": "ตอนที่ 8",
         "ep": 8,
         "url": "https://www.series-days.com/scandal-love-ep-8/"
@@ -88930,6 +88935,41 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Fate-Chooses-You-2026-คู่สรรสวรรค์สร้าง-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 27",
+        "ep": 27,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-27/"
+      },
+      {
+        "name": "ตอนที่ 26",
+        "ep": 26,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-26/"
+      },
+      {
+        "name": "ตอนที่ 25",
+        "ep": 25,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-25/"
+      },
+      {
+        "name": "ตอนที่ 24",
+        "ep": 24,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-24/"
+      },
+      {
+        "name": "ตอนที่ 23",
+        "ep": 23,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-23/"
+      },
+      {
+        "name": "ตอนที่ 22",
+        "ep": 22,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-22/"
+      },
+      {
+        "name": "ตอนที่ 21",
+        "ep": 21,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-21/"
+      },
+      {
         "name": "ตอนที่ 20",
         "ep": 20,
         "url": "https://www.series-days.com/fate-chooses-you-ep-20/"
@@ -89154,6 +89194,11 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Magic-Move-2026-ทำนายทายรัก-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/magic-move-ep-3/"
+      },
+      {
         "name": "ตอนที่ 2",
         "ep": 2,
         "url": "https://www.series-days.com/magic-move-ep-2/"
@@ -89162,6 +89207,107 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/magic-move-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Bloom Life (2026) เพลงรักแห่งคัชการ์",
+    "slug": "https:www.serie-days.combloom-life",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Bloom-Life-2026-เพลงรักแห่งคัชการ์-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/bloom-life-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/bloom-life-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/bloom-life-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/bloom-life-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/bloom-life-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/bloom-life-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Born with Luck (2026) อาชญากรรม IQ ต่ำ",
+    "slug": "https:www.serie-days.comborn-with-luck",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Born-with-Luck-2026-อาชญากรรม-IQ-ต่ำ-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/born-with-luck-ep-9/"
+      },
+      {
+        "name": "ตอนที่ 8",
+        "ep": 8,
+        "url": "https://www.series-days.com/born-with-luck-ep-8/"
+      },
+      {
+        "name": "ตอนที่ 7",
+        "ep": 7,
+        "url": "https://www.series-days.com/born-with-luck-ep-7/"
+      },
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/born-with-luck-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/born-with-luck-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/born-with-luck-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/born-with-luck-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/born-with-luck-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/born-with-luck-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Wu (2026)",
+    "slug": "https:www.serie-days.comwu",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Wu-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/wu-ep-1/"
       }
     ]
   }
