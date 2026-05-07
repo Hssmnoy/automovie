@@ -88691,6 +88691,11 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Scandal-Love-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 10",
+        "ep": 10,
+        "url": "https://www.series-days.com/scandal-love-ep-10/"
+      },
+      {
         "name": "ตอนที่ 9",
         "ep": 9,
         "url": "https://www.series-days.com/scandal-love-ep-9/"
@@ -88939,6 +88944,11 @@
     "slug": "https:www.serie-days.comfate-chooses-you",
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Fate-Chooses-You-2026-คู่สรรสวรรค์สร้าง-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 28",
+        "ep": 28,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-28/"
+      },
       {
         "name": "ตอนที่ 27",
         "ep": 27,
@@ -89221,6 +89231,16 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Bloom-Life-2026-เพลงรักแห่งคัชการ์-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 8",
+        "ep": 8,
+        "url": "https://www.series-days.com/bloom-life-ep-8/"
+      },
+      {
+        "name": "ตอนที่ 7",
+        "ep": 7,
+        "url": "https://www.series-days.com/bloom-life-ep-7/"
+      },
+      {
         "name": "ตอนที่ 6",
         "ep": 6,
         "url": "https://www.series-days.com/bloom-life-ep-6/"
@@ -89257,6 +89277,16 @@
     "slug": "https:www.serie-days.comborn-with-luck",
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Born-with-Luck-2026-อาชญากรรม-IQ-ต่ำ-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 11",
+        "ep": 11,
+        "url": "https://www.series-days.com/born-with-luck-ep-11/"
+      },
+      {
+        "name": "ตอนที่ 10",
+        "ep": 10,
+        "url": "https://www.series-days.com/born-with-luck-ep-10/"
+      },
       {
         "name": "ตอนที่ 9",
         "ep": 9,
@@ -89313,6 +89343,18 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/wu-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Love Beyond Dreams (2026) เพื่อเธออีกครั้ง",
+    "slug": "https:www.serie-days.comlove-beyond-dreams",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Love-Beyond-Dreams-2026-เพื่อเธออีกครั้ง-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/love-beyond-dreams-ep-1/"
       }
     ]
   }
