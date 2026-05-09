@@ -1,5 +1,15 @@
 [
   {
+    "title": "My Royal Nemesis (2026) ศัตรูหัวใจ นางร้ายวังหลวง",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/My-Royal-Nemesis-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "servers": []
+      }
+    ]
+  },
+  {
     "title": "If Wishes Could Kill (2026) กีรีโก แอปหลอน พรสั่งตาย",
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/If-Wishes-Could-Kill-2026-187x269.jpg",
     "episodes": [
@@ -274,6 +284,14 @@
       {
         "name": "ตอนที่ 1",
         "servers": []
+      },
+      {
+        "name": "ตอนที่ 10",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 9",
+        "servers": []
       }
     ]
   },
@@ -395,6 +413,10 @@
       },
       {
         "name": "ตอนที่ 8",
+        "servers": []
+      },
+      {
+        "name": "ตอนที่ 9",
         "servers": []
       }
     ]
