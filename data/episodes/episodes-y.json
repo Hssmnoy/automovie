@@ -35543,5 +35543,46 @@
         "url": "https://www.series-days.com/love-beyond-dreams-ep-1/"
       }
     ]
+  },
+  {
+    "title": "Crazy Love Moo-Moo Uncut Version (2026) พี่ฟากชอบเธอมู่",
+    "slug": "https:www.serie-days.comcrazy-love-moo-moo-uncut",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Crazy-Love-Moo-Moo-Uncut-Version-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/crazy-love-moo-moo-uncut-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
+    "slug": "https:www.serie-days.comyour-dear-daddy",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Your-Dear-Daddy-2026-เรียกแด๊ดสิธาร-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/your-dear-daddy-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Double Helix (2026) ปลายทางแห่งรัก",
+    "slug": "https:www.serie-days.comdouble-helix",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Double-Helix-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/double-helix-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/double-helix-ep-1/"
+      }
+    ]
   }
 ]
