@@ -88955,6 +88955,16 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/04/Fate-Chooses-You-2026-คู่สรรสวรรค์สร้าง-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 33",
+        "ep": 33,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-33/"
+      },
+      {
+        "name": "ตอนที่ 32",
+        "ep": 32,
+        "url": "https://www.series-days.com/fate-chooses-you-ep-32/"
+      },
+      {
         "name": "ตอนที่ 31",
         "ep": 31,
         "url": "https://www.series-days.com/fate-chooses-you-ep-31/"
@@ -89303,6 +89313,16 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Born-with-Luck-2026-อาชญากรรม-IQ-ต่ำ-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 17",
+        "ep": 17,
+        "url": "https://www.series-days.com/born-with-luck-ep-17/"
+      },
+      {
+        "name": "ตอนที่ 16",
+        "ep": 16,
+        "url": "https://www.series-days.com/born-with-luck-ep-16/"
+      },
+      {
         "name": "ตอนที่ 15",
         "ep": 15,
         "url": "https://www.series-days.com/born-with-luck-ep-15/"
@@ -89400,6 +89420,18 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/love-beyond-dreams-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Your Dear Daddy (2026) เรียกแด๊ดสิธาร",
+    "slug": "https:www.serie-days.comyour-dear-daddy",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Your-Dear-Daddy-2026-เรียกแด๊ดสิธาร-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/your-dear-daddy-ep-1/"
       }
     ]
   }
