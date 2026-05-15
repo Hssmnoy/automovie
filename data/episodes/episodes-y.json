@@ -35619,6 +35619,11 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Double-Helix-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/double-helix-ep-3/"
+      },
+      {
         "name": "ตอนที่ 2",
         "ep": 2,
         "url": "https://www.series-days.com/double-helix-ep-2/"
@@ -35627,6 +35632,53 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/double-helix-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Soul Mate (2026)",
+    "slug": "https:www.serie-days.comsoul-mate",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Soul-Mate-2026-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 8",
+        "ep": 8,
+        "url": "https://www.series-days.com/soul-mate-ep-8/"
+      },
+      {
+        "name": "ตอนที่ 7",
+        "ep": 7,
+        "url": "https://www.series-days.com/soul-mate-ep-7/"
+      },
+      {
+        "name": "ตอนที่ 6",
+        "ep": 6,
+        "url": "https://www.series-days.com/soul-mate-ep-6/"
+      },
+      {
+        "name": "ตอนที่ 5",
+        "ep": 5,
+        "url": "https://www.series-days.com/soul-mate-ep-5/"
+      },
+      {
+        "name": "ตอนที่ 4",
+        "ep": 4,
+        "url": "https://www.series-days.com/soul-mate-ep-4/"
+      },
+      {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/soul-mate-ep-3/"
+      },
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/soul-mate-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/soul-mate-ep-1/"
       }
     ]
   }
