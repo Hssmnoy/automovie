@@ -89527,6 +89527,11 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Love-Beyond-Dreams-2026-เพื่อเธออีกครั้ง-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 3",
+        "ep": 3,
+        "url": "https://www.series-days.com/love-beyond-dreams-ep-3/"
+      },
+      {
         "name": "ตอนที่ 2",
         "ep": 2,
         "url": "https://www.series-days.com/love-beyond-dreams-ep-2/"
@@ -89560,6 +89565,16 @@
     "slug": "https:www.serie-days.comthe-heir",
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/The-Heir-2026-กงสีสีหมึก-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 10",
+        "ep": 10,
+        "url": "https://www.series-days.com/the-heir-ep-10/"
+      },
+      {
+        "name": "ตอนที่ 9",
+        "ep": 9,
+        "url": "https://www.series-days.com/the-heir-ep-9/"
+      },
       {
         "name": "ตอนที่ 8",
         "ep": 8,
@@ -89599,6 +89614,18 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/the-heir-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "The Air 4 Elements (2026) เสน่หาวาโย บ้านวาทินวณิช",
+    "slug": "https:www.serie-days.comthe-air-4-elements",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/The-Air-4-Elements-2026-เสน่หาวาโย-บ้านวาทินวณิช-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/the-air-4-elements-ep-1/"
       }
     ]
   }
