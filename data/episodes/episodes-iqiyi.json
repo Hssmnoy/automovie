@@ -89571,6 +89571,16 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/The-Heir-2026-กงสีสีหมึก-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 12",
+        "ep": 12,
+        "url": "https://www.series-days.com/the-heir-ep-12/"
+      },
+      {
+        "name": "ตอนที่ 11",
+        "ep": 11,
+        "url": "https://www.series-days.com/the-heir-ep-11/"
+      },
+      {
         "name": "ตอนที่ 10",
         "ep": 10,
         "url": "https://www.series-days.com/the-heir-ep-10/"
@@ -89631,6 +89641,23 @@
         "name": "ตอนที่ 1",
         "ep": 1,
         "url": "https://www.series-days.com/the-air-4-elements-ep-1/"
+      }
+    ]
+  },
+  {
+    "title": "Smile After Tears (2026) หันกลับมา เช็ดน้ำตาให้นาย",
+    "slug": "https:www.serie-days.comsmile-after-tears",
+    "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Smile-After-Tears-2026-หันกลับมา-เช็ดน้ำตาให้นาย-187x269.jpg",
+    "episodes": [
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/smile-after-tears-ep-2/"
+      },
+      {
+        "name": "ตอนที่ 1",
+        "ep": 1,
+        "url": "https://www.series-days.com/smile-after-tears-ep-1/"
       }
     ]
   }
