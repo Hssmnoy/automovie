@@ -41745,6 +41745,16 @@
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Dazzling-2026-187x269.jpg",
     "episodes": [
       {
+        "name": "ตอนที่ 11",
+        "ep": 11,
+        "url": "https://www.series-days.com/dazzling-ep-11/"
+      },
+      {
+        "name": "ตอนที่ 10",
+        "ep": 10,
+        "url": "https://www.series-days.com/dazzling-ep-10/"
+      },
+      {
         "name": "ตอนที่ 9",
         "ep": 9,
         "url": "https://www.series-days.com/dazzling-ep-9/"
@@ -41808,6 +41818,11 @@
     "slug": "https:www.serie-days.comreborn-rookie",
     "image": "https://www.serie-days.com/wp-content/uploads/2026/05/Reborn-Rookie-2026-187x269.jpg",
     "episodes": [
+      {
+        "name": "ตอนที่ 2",
+        "ep": 2,
+        "url": "https://www.series-days.com/reborn-rookie-ep-2/"
+      },
       {
         "name": "ตอนที่ 1",
         "ep": 1,
